@@ -1,0 +1,97 @@
+@import "slidebar";
+@import "card";
+@import "global";
+	
+.h1 {
+	color: #5a5c69!important;
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+}
+.btn-gtnerate{
+	    cursor: pointer;
+    box-shadow: 0 .125rem .25rem 0 rgba(58,59,69,.2)!important;
+    display: inline-block!important;
+    padding: .5rem 1rem;
+    line-height: 1.5;
+    border-radius: .2rem;
+    background-color: #242e42;
+    color: #fff;
+    font-size: 1rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+	opacity: .8;
+	transition: opactity .15s ease-in-out;
+	&:hover {
+		opacity: 1;
+	}
+}
+
+.col-xl-4 {
+	display: flex;
+    margin-bottom: 1.5rem!important;
+    flex: 0 0 25%;
+    max-width: 25%;
+    position: relative;
+    width: 100%;
+    padding-right: .75rem;
+    padding-left: .75rem;
+}
+
+.row {
+	display: flex;
+    flex-wrap: wrap;
+    margin-right: -.75rem;
+    margin-left: -.75rem;
+}
+
+.border-left {
+	border-left: .25rem solid #242e42!important;
+    padding-bottom: .5rem!important;
+    padding-top: .5rem!important;
+    box-shadow: 0 .15rem 1.75rem 0 rgba(58,59,69,.1)!important;
+}
+
+.text-xs {
+	font-size: .7rem;
+    font-weight: 700!important;
+    text-transform: uppercase!important;
+    color: var(--page-content-txtColor);
+}
+
+.text-ms {
+	font-weight: 700!important;
+    font-size: 1.25rem;
+}
+
+.card-body {
+	display: flex;
+    flex-wrap: wrap;
+    align-items: center!important;
+}
+
+.col-left {
+	flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+    margin-right: .5rem!important;
+}
+
+.col-right {
+	flex: 0 0 auto;
+    width: auto;
+    max-width: 100%;
+    font-weight: 900;
+    color: #dddfeb!important;
+    font-size: 2em;
+}
+
+.chart-NK{
+	width: 100%;
+}
+
+.chart .card-header{
+	font-weight: 700;
+    font-size: 1.2rem;
+    color: #242e42;
+}

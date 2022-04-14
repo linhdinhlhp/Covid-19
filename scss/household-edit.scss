@@ -1,0 +1,382 @@
+@import "slidebar";
+@import "card";
+@import "global";
+
+table.dataTable td:first-child {
+	text-align: center;
+}
+
+div.dataTables_wrapper .row:nth-child(2) .col-sm-12 {
+    width: calc(100% - 0.5rem);
+	margin: 0 auto;
+    overflow-x: auto;
+	#table-nhan-khau {
+		width: max-content!important;
+	}
+}
+
+.fixed {
+	position: fixed;
+}
+
+.grid {
+	display: grid;
+	grid-gap: 1rem;
+	padding: 1rem 2rem 2rem 2rem;
+	border-bottom: 2px solid #e3e6f0;
+}
+
+.er_row {
+	font-size: 1.2rem;
+    text-align: center;
+    color: red;
+    font-weight: 700;
+}
+
+.block-1, .block-2, .block-3, .block-4 {
+	padding: 0!important;
+}
+
+.block-1 {
+    grid-column: 1/2;
+}
+
+.block-2 {
+    grid-column: 2/3;
+}
+
+.block-3 {
+    grid-column: 3/4;
+}
+
+.block-4 {
+    grid-column: 1/4;
+	button {
+		float: right !important;
+	}
+}
+
+.card-result {
+	padding-top: 0!important;
+	h6 {
+		font-weight: 700 !important;
+		font-size: 1rem;
+		color: #858796;
+		margin-bottom: 1.25rem;
+		margin-top: 1.25rem;
+	}
+}
+
+.form-responsive {
+    margin-top: 1rem;
+	
+	.input-block {
+		background-color: rgba(255, 255, 255, 0.8);
+		border: 2px solid #e3e6f0;
+		width: 100%;
+		height: 40px;
+		padding: 25px;
+		position: relative;
+		margin-bottom: 20px;
+		-moz-transition: all 0.3s ease-out;
+		-o-transition: all 0.3s ease-out;
+		-webkit-transition: all 0.3s ease-out;
+		transition: all 0.3s ease-out;
+		
+		label {
+			padding: 0 10px;
+			background: #fff;
+			position: absolute;
+			left: 8px;
+			top: 20px;
+			display: block;
+			margin: 0;
+			font-weight: 400;
+			z-index: 1;
+			color: #858796;
+			font-size: 1.2rem;
+			line-height: 10px;
+		}
+		
+		.form-control {
+			background-color: transparent;
+			box-shadow: none;
+			font: 1.2rem/1.5 "Nunito", sans-serif;
+			height: 40px;
+			padding: 0;
+			position: relative;
+			top: -20px;
+			z-index: 2;
+			width: 100%;
+			outline: none;
+			border: 0;
+			transition: color 0.3s ease;
+			
+			&:focus label {
+				top: 0;
+			}
+		}
+	}
+	
+	.square-button {
+		background-color: var(--page-header-bgColor);
+    	color: #fff;
+		font-size: 16px;
+		font-weight: 700;
+		text-align: center;
+		-moz-border-radius: 2px;
+		-webkit-border-radius: 2px;
+		border-radius: 2px;
+		-moz-transition: all 0.3s ease;
+		-o-transition: all 0.3s ease;
+		-webkit-transition: all 0.3s ease;
+		transition: all 0.3s ease;
+		padding: 1rem 5rem;
+		border: none;
+		width: 50%;
+		margin: 2rem 25% 0;
+		
+		&:hover,
+		&:focus {
+			background-color: var(--page-header-bgColor-hover);
+		}
+	}
+}
+
+
+/* Popup */
+
+.popup {
+	position: absolute;
+    z-index: 999;
+    top: 0;
+    background: rgba(34,46,66,0.70);
+	.card {
+		width: auto!important;
+		margin: 4rem 20%;
+		margin-bottom: 0!important;
+		.card-header {
+			grid-template-columns: calc(100% - 1rem) 1rem;
+    		display: grid;
+			h6 {
+				grid-column: 1/2;
+				line-height: 1.5;
+			}
+			span {
+				text-align: center;
+				vertical-align: middle;
+				cursor: pointer;
+				i {
+					font-size: 1rem;
+    				color: var(--page-content-txtColor);
+					transition: all 0.3s ease;
+					&:hover {
+						transform: rotate(90deg);
+					}
+				}
+			}
+		}
+	}
+}
+
+.input-disable {
+	background: #dde9f8!important;
+	pointer-events: none;
+	label {
+		    background: linear-gradient(0deg, #DDE9F8 50%, #FFFFFF 50%)!important;
+	}
+}
+
+.input-block {
+	&.notes{
+        height: 98px;
+    }
+
+    &.focus {
+        background-color: #fff;
+        border: 2px solid var(--page-header-headingColor);
+    }
+	
+	textarea.form-control {
+			resize: none;
+			height: 72px !important;
+			overflow-y: hidden;
+			margin: 5px 0;
+		}
+}
+
+.icon-edit {
+	font-size: 1.25rem;
+	margin-left: 10%;
+//	&.han-edit {
+//		margin-left: 10%;
+//	}
+	i {
+		cursor: pointer;
+		&:hover {
+			color: var(--page-content-txtColor);
+		}
+	}
+}
+
+
+.tabs {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	.card-header {
+		text-align: center;
+		outline: none;
+		&.active, &:hover {
+			border-bottom: 3px solid #242e42;
+			transition: 0.3s ease;
+		}
+	}
+}
+
+.card-header {
+	border-bottom: 3px solid #e3e6f0;
+}
+
+.tabcontent {
+	display: none;
+}
+.tabcontent.active {
+  display: block;
+}
+
+
+.modal {
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(34, 46, 66, 0.85);;
+    padding-top: 50px;
+	.close {
+        position: absolute;
+        right: 35px;
+        top: 15px;
+        font-size: 40px;
+        font-weight: bold;
+        color: #f1f1f1;
+		&:hover, &:focus {
+			color: #f44336;
+        	cursor: pointer;
+		}
+	}
+    .modal-content {
+        background-color: #fefefe;
+        margin: 10% auto 25% auto; /* 5% from the top, 15% from the bottom and centered */
+        border: 1px solid #888;
+        width: 40%; /* Could be more or less, depending on screen size */
+		button:hover {
+		  opacity:1;
+		}
+		button {
+		  color: white;
+		  padding: 14px 20px;
+		  margin: 8px 0;
+		  border: none;
+			outline: none;
+            font-size: 1.2rem;
+            font-family: 'Nunito';
+		  cursor: pointer;
+		  width: 100%;
+		  opacity: 0.9;
+		}
+		.container {
+            padding: 16px;
+            text-align: center;
+			h1 {
+				margin: 1.5rem 0 1rem 0;
+    			font-size: xxx-large;
+			}
+			p {
+				font-size: 1.2rem;
+    			margin-bottom: 1.5rem;
+			}
+			.clearfix::after {
+              content: "";
+              clear: both;
+              display: table;
+            }
+			.cancelbtn, .deletebtn {
+              float: left;
+              width: 50%;
+            }
+            .cancelbtn {
+              background-color: #ccc;
+              color: black;
+            }
+            .deletebtn {
+//              background-color: #f44336;
+              background-color: #242e42;
+            }
+        }
+		
+    }
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+ 
+.input-ly-do {
+    border: 2px solid #dde9f8;
+    padding: 10px 20px;
+    width: 40%;
+    font-size: 1.2rem;
+    font-family: 'Nunito';
+    border-radius: 5px;
+    outline: none;
+    margin-bottom: 2rem;
+	transition: width 0.2s ease;
+	&:focus {
+		width: 100%;
+	}
+}
+
+/* MQ RULES */
+@media screen and (max-width: 1600px) {
+	.popup .card {
+		margin: 4rem 18%!important;
+	}
+}
+
+@media screen and (max-width: 1366px) {
+	.popup .card {
+		margin: 4rem 15%!important;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.popup .card {
+		margin: 4rem 10%!important;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.popup .card {
+		margin: 0!important;
+	}
+	
+}
+
+@media screen and (max-width: 400px) {
+	.cancelbtn, .deletebtn {
+     width: 100%;
+  }
+}
+
+
+/* BODY CLASSES */
+
+@media screen and (min-width: 768px) {
+	
+}
+
+	

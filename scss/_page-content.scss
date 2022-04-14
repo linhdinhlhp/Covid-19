@@ -1,0 +1,44 @@
+// Scss Document
+
+
+.page-content .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+}
+
+.page-content .grid > article {
+    display: flex;
+    height: 300px;
+    background: var(--page-content-blockColor);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.page-content .grid > article:first-child,
+.page-content .grid > article:last-child {
+    grid-column: 1 / -1;
+}
+
+/* MQ RULES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@media screen and (max-width: 767px) {
+    .page-content .grid {
+        grid-gap: 10px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .page-content .grid > article {
+        grid-column: 1 / -1;
+    }
+}
+
+
+/* BODY CLASSES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+@media screen and (min-width: 768px) {
+	
+	
+}

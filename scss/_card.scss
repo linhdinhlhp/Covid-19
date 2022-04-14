@@ -1,0 +1,70 @@
+
+/* CARD
+-------------------------------------------------------------------*/
+//.page-content .card {
+//    display: grid;
+//    grid-template-columns: repeat(2, 1fr);
+//    grid-gap: 30px;
+//}
+
+.card {
+	width: 100%;
+    background: var(--page-content-blockColor);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+	color: #858796;
+	display: inline-block;
+	margin-bottom: 1.5rem;
+	
+	.card-header {
+		border-radius: calc(.35rem - 1px) calc(.35rem - 1px) 0 0;
+		padding-bottom: 1rem!important;
+		padding-top: 1rem!important;
+		padding: .75rem 1.25rem;
+		margin-bottom: 0;
+		background-color: #f8f9fc;
+		border-bottom: 1px solid #e3e6f0;
+		h6 {
+			color: var(--page-content-txtColor) !important;
+			font-weight: 700 !important;
+			font-size: 1rem;
+			text-transform: uppercase;
+		}
+	}
+	.card-body {
+		flex: 1 1 auto;
+		min-height: 1px;
+		padding: 1.25rem;
+		.table-responsive {
+			display: block;
+			width: 100%;
+			overflow-x: auto;
+			-webkit-overflow-scrolling: touch;
+		}
+	}
+}
+
+//.page-content .card > div:first-child,
+//.page-content .card > div:last-child {
+//    grid-column: 1 / -1;
+//}
+
+/* MQ RULES */
+@media screen and (max-width: 767px) {
+    .page-content .card {
+        grid-gap: 10px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+//    .page-content .card > div {
+//        grid-column: 1 / -1;
+//    }
+}
+
+
+/* BODY CLASSES */
+
+@media screen and (min-width: 768px) {
+	
+}

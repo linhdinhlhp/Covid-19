@@ -1,0 +1,470 @@
+/* Loading animation */
+.preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: #fff; }
+  .preloader .preloader-animation {
+    margin: -20px auto 0;
+    top: 50%;
+    left: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    text-align: center;
+    -webkit-animation: rotate 2s infinite linear;
+    animation: rotate 2s infinite linear; }
+    .preloader .preloader-animation .dot1, .preloader .preloader-animation .dot2 {
+      width: 60%;
+      height: 60%;
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      background-color: #242e42;
+      border-radius: 100%;
+      -webkit-animation: bounce 2s infinite ease-in-out;
+      animation: bounce 2s infinite ease-in-out; }
+    .preloader .preloader-animation .dot2 {
+      top: auto;
+      bottom: 0;
+      -webkit-animation-delay: -1s;
+      animation-delay: -1s; }
+
+@-webkit-keyframes rotate {
+  100% {
+    -webkit-transform: rotate(360deg); } }
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg); } }
+@-webkit-keyframes bounce {
+  0%, 100% {
+    -webkit-transform: scale(0); }
+  50% {
+    -webkit-transform: scale(1); } }
+@keyframes bounce {
+  0%,	100% {
+    transform: scale(0);
+    -webkit-transform: scale(0); }
+  50% {
+    transform: scale(1);
+    -webkit-transform: scale(1); } }
+:root {
+  --page-header-bgColor: #242e42;
+  --page-header-bgColor-hover: #1d2636;
+  --page-header-txtColor: #dde9f8;
+  --page-header-headingColor: #7889a4;
+  --page-header-width: 220px;
+  --page-content-bgColor: #f0f1f6;
+  --page-content-txtColor: #171616;
+  --page-content-blockColor: #fff;
+  --white: #fff;
+  --black: #333;
+  --blue: #00b9eb;
+  --red: #ec1848;
+  --border-radius: 4px;
+  --box-shadow: 0 0 10px -2px rgba(0, 0, 0, 0.075);
+  --switch-bgLightModeColor: #87cefa;
+  --switch-sunColor: gold;
+  --switch-moonColor: #f4f4f4;
+  --switch-bgDarkModeColor: #1f1f27; }
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: 1px solid green;
+  -webkit-text-fill-color: #fff;
+  transition: background-color 5000s ease-in-out 0s; }
+
+/* Scroll Bar */
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #f5f5f5; }
+
+::-webkit-scrollbar {
+  width: 12px;
+  background-color: #f5f5f5; }
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #242e42; }
+
+body {
+  color: var(--page-content-txtColor);
+  background: var(--white);
+  font-family: Nunito,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden; }
+
+/* Pen Title */
+.pen-title {
+  padding: 50px 0px;
+  text-align: center;
+  letter-spacing: 2px; }
+  .pen-title h1 {
+    font-size: 3rem;
+    font-weight: 300; }
+
+/* Rerun */
+.rerun {
+  margin: 0 0 30px;
+  text-align: center; }
+  .rerun a {
+    cursor: pointer;
+    display: inline-block;
+    background: var(--page-header-bgColor);
+    border-radius: 3px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    padding: 10px 20px;
+    color: var(--white);
+    text-decoration: none;
+    transition: 0.3s ease; }
+    .rerun a:hover {
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
+
+/* Container */
+.container {
+  position: relative;
+  max-width: 460px;
+  width: 100%;
+  margin: 0 auto 100px; }
+  .container.active .card:first-child {
+    background: #F2F2F2;
+    margin: 0 15px; }
+  .container.active .card:nth-child(2) {
+    background: #FAFAFA;
+    margin: 0 10px; }
+  .container.active .card.alt {
+    top: 20px;
+    right: 0;
+    width: 100%;
+    min-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    padding: 60px 0 40px;
+    overflow: hidden; }
+    .container.active .card.alt .toggle {
+      position: absolute;
+      top: 40px;
+      right: -70px;
+      box-shadow: none;
+      -webkit-transform: scale(10);
+      transform: scale(10);
+      transition: -webkit-transform .3s ease;
+      transition: transform .3s ease;
+      transition: transform .3s ease, -webkit-transform .3s ease; }
+      .container.active .card.alt .toggle:before {
+        content: ''; }
+    .container.active .card.alt .title, .container.active .card.alt .input-container, .container.active .card.alt .button-container {
+      left: 0;
+      opacity: 1;
+      visibility: visible;
+      transition: .3s ease; }
+    .container.active .card.alt .title {
+      transition-delay: .3s; }
+    .container.active .card.alt .input-container {
+      transition-delay: .4s; }
+    .container.active .card.alt .input-container:nth-child(2) {
+      transition-delay: .5s; }
+    .container.active .card.alt .input-container:nth-child(3) {
+      transition-delay: .6s; }
+    .container.active .card.alt .button-container {
+      transition-delay: .7s; }
+
+/* Card */
+.card {
+  position: relative;
+  background: var(--white);
+  border-radius: 5px;
+  padding: 60px 0 40px 0;
+  box-sizing: border-box;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: .3s ease;
+  z-index: 1;
+  /* Title */
+  /* Inputs */
+  /* Notification */
+  /* Button */
+  /* Footer */
+  /* Alt Card */ }
+  .card:first-child {
+    background: #FAFAFA;
+    height: 10px;
+    border-radius: 5px 5px 0 0;
+    margin: 0 10px;
+    padding: 0; }
+  .card .title {
+    position: relative;
+    z-index: 1;
+    border-left: 5px solid var(--page-header-bgColor);
+    margin: 0 0 35px;
+    padding: 10px 0 10px 50px;
+    color: #1b2332;
+    font-size: 32px;
+    font-weight: 600px;
+    text-transform: uppercase; }
+  .card .input-container {
+    position: relative;
+    margin: 0 60px 50px; }
+    .card .input-container input {
+      outline: none;
+      z-index: 1;
+      position: relative;
+      background: none;
+      width: 100%;
+      height: 60px;
+      border: 0;
+      color: #212121;
+      font-size: 24px;
+      font-weight: 400px; }
+      .card .input-container input:focus ~ label {
+        color: #9D9D9D;
+        -webkit-transform: translate(-12%, -50%) scale(0.75);
+        transform: translate(-12%, -50%) scale(0.75); }
+      .card .input-container input:focus ~ .bar:before, .card .input-container input:focus ~ .bar:after {
+        width: 50%; }
+      .card .input-container input:valid ~ label {
+        color: #9d9d9d;
+        -webkit-transform: translate(-12%, -50%) scale(0.75);
+        transform: translate(-12%, -50%) scale(0.75); }
+    .card .input-container label {
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: #757575;
+      font-size: 24px;
+      font-weight: 300;
+      line-height: 60px;
+      transition: 0.2s ease; }
+    .card .input-container .bar {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      background: #757575;
+      width: 100%;
+      height: 1px; }
+      .card .input-container .bar:before, .card .input-container .bar:after {
+        content: '';
+        position: absolute;
+        background: var(--page-header-bgColor);
+        width: 0;
+        height: 2px;
+        transition: .2s ease; }
+      .card .input-container .bar:before {
+        left: 50%; }
+      .card .input-container .bar:after {
+        right: 50%; }
+  .card .noti-container {
+    position: relative;
+    margin: 0 60px 50px; }
+    .card .noti-container p {
+      font-size: 18px;
+      font-weight: 400;
+      color: red; }
+  .card .button-container {
+    margin: 0 60px;
+    text-align: center; }
+    .card .button-container button {
+      outline: 0;
+      cursor: pointer;
+      position: relative;
+      display: inline-block;
+      background: 0;
+      width: 240px;
+      border: 2px solid #e3e3e3;
+      padding: 20px 0;
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 1;
+      text-transform: uppercase;
+      overflow: hidden;
+      transition: .3s ease; }
+      .card .button-container button span {
+        position: relative;
+        z-index: 1;
+        color: #ddd;
+        transition: .3s ease; }
+      .card .button-container button:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        display: block;
+        background: var(--page-header-bgColor);
+        width: 30px;
+        height: 30px;
+        border-radius: 100%;
+        margin: -15px 0 0 -15px;
+        opacity: 0;
+        transition: .3s ease; }
+      .card .button-container button:hover, .card .button-container button:active, .card .button-container button:focus {
+        border-color: var(--page-header-bgColor); }
+        .card .button-container button:hover span, .card .button-container button:active span, .card .button-container button:focus span {
+          color: var(--page-header-bgColor); }
+      .card .button-container button:active span, .card .button-container button:focus span {
+        color: var(--white); }
+      .card .button-container button:active:before, .card .button-container button:focus:before {
+        opacity: 1;
+        -webkit-transform: scale(10);
+        transform: scale(10); }
+  .card .footer {
+    margin: 40px 0 0;
+    color: #D3D3D3;
+    font-size: 24px;
+    font-weight: 300;
+    text-align: center; }
+    .card .footer a {
+      color: inherit;
+      text-decoration: none;
+      transition: .3s ease; }
+      .card .footer a:hover {
+        color: #BABABA; }
+  .card.alt {
+    position: absolute;
+    top: 40px;
+    right: -70px;
+    z-index: 10;
+    width: 140px;
+    height: 140px;
+    background: none;
+    border-radius: 100%;
+    box-shadow: none;
+    padding: 0;
+    transition: .3s ease;
+    /* Toggle */
+    /* Title */
+    /* Input */
+    /* Button */ }
+    .card.alt .toggle {
+      position: relative;
+      background: var(--page-header-bgColor);
+      width: 140px;
+      height: 140px;
+      border-radius: 100%;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+      color: var(--white);
+      font-size: 58px;
+      line-height: 140px;
+      text-align: center;
+      cursor: pointer; }
+      .card.alt .toggle:before {
+        content: '\f040';
+        display: inline-block;
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: inherit;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0); }
+    .card.alt .title, .card.alt .input-container, .card.alt .button-container {
+      left: 100px;
+      opacity: 0;
+      visibility: hidden; }
+    .card.alt .title {
+      position: relative;
+      border-color: var(--white);
+      color: var(--white); }
+      .card.alt .title .close {
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        right: 60px;
+        display: inline;
+        color: var(--white);
+        font-size: 58px;
+        font-weight: 400; }
+        .card.alt .title .close:before {
+          content: '\00d7'; }
+    .card.alt .input-container input {
+      color: var(--white); }
+      .card.alt .input-container input:focus ~ label {
+        color: var(--white); }
+      .card.alt .input-container input:focus ~ .bar:before, .card.alt .input-container input:focus ~ .bar:after {
+        background: var(--white); }
+      .card.alt .input-container input:valid ~ label {
+        color: var(--white); }
+    .card.alt .input-container label {
+      color: rgba(255, 255, 255, 0.8); }
+    .card.alt .input-container .bar {
+      background: rgba(255, 255, 255, 0.8); }
+    .card.alt .button-container button {
+      width: 100%;
+      background: var(--white);
+      border-color: var(--white); }
+      .card.alt .button-container button span {
+        color: var(--page-header-bgColor); }
+      .card.alt .button-container button:hover {
+        background: rgba(255, 255, 255, 0.9); }
+      .card.alt .button-container button:active:before, .card.alt .button-container button:focus:before {
+        display: none; }
+
+.corona .corona-left {
+  background-image: url("../images/Corona-1.svg");
+  background-repeat: no-repeat;
+  background-size: auto;
+  width: 460px;
+  height: 408px;
+  position: absolute;
+  bottom: 0;
+  left: -395px;
+  z-index: 1; }
+.corona .corona-right {
+  background-image: url("../images/Corona-2.svg");
+  background-repeat: no-repeat;
+  background-size: auto;
+  width: 460px;
+  height: 408px;
+  position: absolute;
+  bottom: 0;
+  right: -375px;
+  z-index: 0; }
+
+.corono-bg {
+  position: absolute;
+  background-image: url(../images/Corona-bg.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  z-index: -1; }
+
+/* Keyframes */
+@-webkit-keyframes buttonFadeInUp {
+  0% {
+    bottom: 30px;
+    opacity: 0; } }
+@keyframes buttonFadeInUp {
+  0% {
+    bottom: 30px;
+    opacity: 0; } }
+/* MQ RULES */
+@media screen and (max-width: 767px) {
+  body {
+    margin-left: 280px;
+    overflow-x: auto;
+    width: 767px; }
+
+  .corono-bg {
+    width: 767px; } }
+/* BODY CLASSES */
+@media screen and (min-width: 768px) {
+  body {
+    overflow-x: auto; } }

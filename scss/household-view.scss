@@ -1,0 +1,60 @@
+// Scss Document
+@import "slidebar";
+@import "card";
+//@import "global";
+
+.h1 {
+    color: #5a5c69 !important;
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.tabs {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	.card-header {
+		text-align: center;
+		outline: none;
+		&.active, &:hover {
+			border-bottom: 3px solid #242e42;
+			transition: 0.3s ease;
+		}
+	}
+}
+
+.card-header {
+	border-bottom: 3px solid #e3e6f0;
+}
+
+.tabcontent {
+	display: none;
+}
+.tabcontent.active {
+  display: block;
+}
+
+div.dataTables_wrapper .row:nth-child(2) .col-sm-12 {
+    width: calc(100% - 0.5rem);
+	margin: 0 auto;
+    overflow-x: auto;
+	#table-nhan-khau {
+		width: max-content!important;
+	}
+}
+
+
+/* MQ RULES */
+@media screen and (max-width: 767px) {
+   
+}
+
+@media screen and (max-width: 400px) {
+    
+}
+
+
+/* BODY CLASSES */
+
+@media screen and (min-width: 768px) {
+	
+}

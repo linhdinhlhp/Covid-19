@@ -1,0 +1,76 @@
+.col-sm-6 {
+	width: 50%;
+}
+
+.col-sm-12 {
+	width: 100%;
+}
+
+.col-sm-8 {
+	width: calc(100%/3*2);
+}
+
+.col-sm-4 {
+	width: calc(100%/3);
+}
+
+.col-sm-3 {
+	width: calc(100%/4);
+}
+
+.col-sm-2 {
+	width: calc(100%/6);
+}
+
+.col-sm-10 {
+	width: calc(100%/6*5);
+}
+
+.col-sm-2, .col-sm-4, .col-sm-6, .col-sm-3, .col-sm-12, .col-sm-8, .col-sm-10
+{
+	float: left;
+	padding: 0 0.5rem;
+	transition: all 0.3s ease;
+}
+
+/* Form */
+.col-sm-12:last-child
+{
+	float: none;
+	outline: none;
+}
+
+.h1 {
+    color: #5a5c69 !important;
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+}
+
+
+@media screen and (max-width: 1024px) {
+	.col-sm-2, .col-sm-4, .col-sm-6, .col-sm-3, .col-sm-12, .col-sm-8, .col-sm-10 {
+		width: 100%;
+		transition: all 0.3 ease;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.form-responsive {
+		padding: 0 10%!important;
+	}
+	.col-sm-2, .col-sm-4, .col-sm-6, .col-sm-3, .col-sm-12, .col-sm-8, .col-sm-10 {
+		width: 100%;
+		transition: all 0.3 ease;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	
+}
+
+
+/* BODY CLASSES */
+
+@media screen and (min-width: 768px) {
+	
+}

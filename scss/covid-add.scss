@@ -1,0 +1,343 @@
+// Scss Document
+@import "slidebar";
+@import "card";
+@import "global";
+
+/* Add New
+-------------------------------------------------------------------*/
+
+.input-block label > span, .select label > span {
+	color: red;
+}
+
+.col-sm-12:last-child button {
+	margin: 3rem 0 5rem 0;
+}
+
+.col-sm-12:last-child {
+    padding: 0 calc(50% - 100px);
+}
+
+.form-responsive {
+    margin-top: 3rem;
+    padding: 0 15%;
+	
+	.describe {
+		margin: 5px 20px 0 20px;
+		font-size: 16px;
+		font-style: italic;
+	}
+	
+	.noti-input {
+		font-size: 1.2rem;
+		color: red;
+		font-weight: 400;
+		margin-top: 20px;
+		padding: 0 25px;
+		transition: all 0.4s ease;
+	}
+	
+	.input-radio {
+		width: 100%;
+		padding: 10px 25px;
+		position: relative;
+		margin-top: 20px;
+		font-size: 1.2rem;
+		line-height: 1.5;
+		
+		label {
+			cursor: pointer;
+			margin-left: 5px;
+		}
+		
+		input[type=radio] {
+			content: "";
+			width: 1.2rem;
+			height: 1.2rem;
+			border-radius: 50%;
+			background-color: #fff;
+			border: 3px #00b9eb solid;
+			position: relative;
+    		top: 3px;
+			outline: none;
+			cursor: pointer;
+		}
+
+		input[type="radio"]:checked {
+			background-color: #242e42;
+    		border: 3px solid #00b9eb;
+			
+		}
+
+		label + input[type="radio"]:checked {
+			background-color: #242e42;
+    		border: 3px solid #00b9eb;
+		}
+	}
+	
+	.input-block {
+		background-color: rgba(255, 255, 255, 0.8);
+		border: 2px solid #e3e6f0;
+		width: 100%;
+		height: 40px;
+		padding: 25px;
+		position: relative;
+		margin-top: 20px;
+		-moz-transition: all 0.3s ease-out;
+		-o-transition: all 0.3s ease-out;
+		-webkit-transition: all 0.3s ease-out;
+		transition: all 0.3s ease-out;
+		
+		&.notes{
+			height: 98px;
+		}
+		
+		&.textarea {
+			height: auto;
+			.form-control {
+				height: auto;
+				resize: none;
+			}
+		}
+		
+		&.focus {
+			background-color: #fff;
+			border: 2px solid var(--page-header-headingColor);
+		}
+		
+		label {
+			padding: 0 10px;
+			background: #fff;
+			position: absolute;
+			left: 8px;
+			top: 20px;
+			display: block;
+			margin: 0;
+			font-weight: 300;
+			z-index: 1;
+			color: #858796;
+			font-size: 1.2rem;
+			line-height: 10px;
+			span {
+				color: red;
+    			font-weight: 400;
+			}
+		}
+		
+		.form-control {
+			background-color: transparent;
+			box-shadow: none;
+			color: var(--page-content-txtColor);
+			font: 1.2rem/1.5 'Nunito', sans-serif;
+			height: 40px;
+			padding: 0;
+			position: relative;
+			top: -20px;
+			z-index: 2;
+			width: 100%;
+			outline: none;
+			border: 0;
+			transition: color 0.3s ease;
+						
+			&:focus {
+				color: var(--page-content-txtColor);
+			}
+			
+			&:focus label {
+				top: 0;
+			}
+		}
+		
+		textarea.form-control {
+			resize: none;
+			height: 72px;
+			overflow-y: hidden;
+			margin: 5px 0;
+		}
+	}
+	
+	.square-button {
+		background-color: var(--page-header-bgColor);
+		color: #fff;
+		font-size: 26px;
+		text-transform: uppercase;
+		font-family: 'Nunito';
+		font-weight: 700;
+		text-align: center;
+		-moz-border-radius: 2px;
+		-webkit-border-radius: 2px;
+		border-radius: 2px;
+		-moz-transition: all 0.3s ease;
+		-o-transition: all 0.3s ease;
+		-webkit-transition: all 0.3s ease;
+		transition: all 0.3s ease;
+		padding: 0 60px;
+		height: 60px;
+		border: none;
+		width: 100%;
+		
+		&:hover,
+		&:focus {
+			background-color: var(--page-header-bgColor-hover);
+		}
+	}
+}
+
+.card-header {
+	border-bottom: 3px solid #e3e6f0;
+}
+
+.check-box {
+	display: flex;
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 100%;
+    height: 40px;
+    padding: 15px;
+    position: relative;
+    margin-top: 20px;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+	input[type="checkbox"] {
+		width: 1.2rem;
+		height: 1.2rem;
+		background: transparent;
+		border: 2px solid #00b9eb;
+		border-radius: 3px;
+		cursor: pointer;
+		outline: none;
+		&:checked {
+			color: #fff;
+			background-color: #00b9eb;
+			font: normal normal normal 0.8rem/1.2 FontAwesome;
+			font-weight: 400;
+//			text-rendering: auto;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+			text-align: center;
+			&:after {
+				content: '\f00c';
+			}
+		}
+		&:not(:disabled):checked:hover:after {
+			content: '\f00c';
+		}
+	}
+	label {
+		margin-left: 10px;
+		line-height: 1.2;
+		cursor: pointer;
+	}
+}
+
+.custom-select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  background-image: none;
+  border: none;
+}
+/* Remove IE arrow */
+.custom-select::-ms-expand {
+  display: none;
+}
+/* Custom Select */
+.select {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 54px;
+    line-height: 3;
+//    background: #dde9f8;
+	border: 2px solid #e3e6f0;
+    margin-top: 20px;
+	label {
+		position: absolute;
+		z-index: 1;
+		font-size: 1.2rem;
+		font-weight: 300;
+		line-height: 10px;
+		left: 8px;
+		padding: 0 10px;
+		display: block;
+		top: 20px;
+		background-color: #fff;
+	}
+	&.focus {
+		background-color: #fff;
+		border: 2px solid var(--page-header-headingColor);
+	}
+}
+
+.custom-select {
+    flex: 1;
+    padding: 0 .5em;
+    color: #858796;
+	background-color: transparent;
+    font-family: 'Nunito';
+	font-size: 1.2rem;
+    font-weight: 300;
+    cursor: pointer;
+	z-index: 2;
+	-moz-transition: all 0.3s ease-out;
+		-o-transition: all 0.3s ease-out;
+		-webkit-transition: all 0.3s ease-out;
+		transition: all 0.3s ease-out;
+}
+/* Arrow */
+.select::after {
+  content: '\25BC';
+  position: absolute;
+      top: -2px;
+  right: -1px;
+  padding: 3px 0;
+    width: 54px;
+    text-align: center;
+  background: #242e42;
+  color: #fff;
+  cursor: pointer;
+  pointer-events: none;
+  -webkit-transition: .25s all ease;
+  -o-transition: .25s all ease;
+  transition: .25s all ease;
+	z-index: 2;
+}
+/* Transition */
+.select:hover::after {
+  color:#00b9eb;
+}
+
+.error-inf {
+	font-size: 1.2rem;
+	margin-top: 30px;
+    color: #ec1848;
+    font-weight: 700;
+	text-align: center;
+}
+
+/* MQ RULES */
+
+@media screen and (max-width: 1024px) {
+	
+}
+
+@media screen and (max-width: 767px) {
+	.form-responsive {
+		padding: 0 10%!important;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	
+}
+
+
+/* BODY CLASSES */
+
+@media screen and (min-width: 768px) {
+	
+}

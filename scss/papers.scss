@@ -1,0 +1,162 @@
+@import "slidebar";
+@import "card";
+@import "global";
+
+.card-body {
+    position: relative;
+}
+
+.card-header {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #242e42;
+}
+
+.row {
+	position: relative;
+    height: 60px;
+}
+
+.content {
+	    width: calc(100% - 50px);
+    font-size: 1.2rem;
+    font-weight: 400;
+    border-bottom: 1px solid #909090;
+    padding: 5px 0 6px;
+}
+
+.btn-download {
+  flex: 0 0 auto;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+@media screen and (max-height: 255px) {.btn-download {
+    margin: 25px auto
+}
+  }
+
+.button {
+  display: inline-block;
+    padding: 9px 10px 7px;
+    border: 0;
+    border-radius: 3px;
+    background: #242e42;
+    text-decoration: none;
+    transition: all 1.2s ease-in-out;
+}
+
+.button i::after {
+    content: "\f019";
+    font-size: 20px;
+    color: #fff;
+  }
+
+.button:hover {
+    -webkit-animation: pulse 0.2s 2 both;
+            animation: pulse 0.2s 2 both;
+  }
+
+.button.loading i {
+      -webkit-animation: loading 2s infinite linear;
+              animation: loading 2s infinite linear;        
+    }
+
+.button.loading i::after {
+        content: "\f1ce";
+      }
+
+.button.success {
+    border-radius: 50%;
+    background: #80bca3;
+  }
+
+.button.success i::after {
+      content: "\f00c";
+      color: transparent;
+      -webkit-animation: change-icon 1s 0.6s linear both;
+              animation: change-icon 1s 0.6s linear both;
+    }
+
+@-webkit-keyframes loading {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(359deg);
+  }
+}
+
+@keyframes loading {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(359deg);
+  }
+}
+
+@-webkit-keyframes change-icon {
+  0% {
+    color: transparent;
+  }
+  
+  100% {
+    color: #fff;
+  }
+}
+
+@keyframes change-icon {
+  0% {
+    color: transparent;
+  }
+  
+  100% {
+    color: #fff;
+  }
+}
+
+@-webkit-keyframes pulse {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes pulse {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+
+.grid {
+	    display: grid;
+    gap: 20px;
+    grid-template: repeat(1, 1fr) / repeat(3, 1fr);
+    grid-auto-flow: column;
+}
+.grid div:nth-child(2) {
+	grid-column: 2 / 3;
+}
+.grid div:nth-child(3) {
+	grid-column: 3 / 4;
+}
+	

@@ -1,0 +1,38 @@
+/* CARD
+-------------------------------------------------------------------*/
+.card {
+  width: 100%;
+  background: var(--page-content-blockColor);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  color: #858796;
+  display: inline-block;
+  margin-bottom: 1.5rem; }
+  .card .card-header {
+    border-radius: calc(.35rem - 1px) calc(.35rem - 1px) 0 0;
+    padding-bottom: 1rem !important;
+    padding-top: 1rem !important;
+    padding: .75rem 1.25rem;
+    margin-bottom: 0;
+    background-color: #f8f9fc;
+    border-bottom: 1px solid #e3e6f0; }
+    .card .card-header h6 {
+      color: var(--page-content-txtColor) !important;
+      font-weight: 700 !important;
+      font-size: 1rem;
+      text-transform: uppercase; }
+  .card .card-body {
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 1.25rem; }
+    .card .card-body .table-responsive {
+      display: block;
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch; }
+
+/* MQ RULES */
+@media screen and (max-width: 767px) {
+  .page-content .card {
+    grid-gap: 10px; } }
+/* BODY CLASSES */
